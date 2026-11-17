@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration</title>
+  <style>
+    body { font-family: Arial; max-width: 700px; margin: 30px auto; }
+    input, select, button { padding: 8px; margin: 5px 0; width: 100%; box-sizing: border-box; }
+    button { background: #2563eb; color: white; border: none; cursor: pointer; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+  </style>
+</head>
+<body>
+  <h2>Student Registration</h2>
+  <form action="/register" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <select name="course" required>
+      <option value="">-- Course chuno --</option>
+      <option>B.Tech</option>
+      <option>BCA</option>
+      <option>MCA</option>
+      <option>MBA</option>
+    </select>
+    <button type="submit">Register</button>
+  </form>
+
+  <h3>Registered Students</h3>
+  <table>
+    <tr><th>ID</th><th>Name</th><th>Email</th><th>Course</th></tr>
+    {% for s in students %}
+    <tr><td>{{ s[0] }}</td><td>{{ s[1] }}</td><td>{{ s[2] }}</td><td>{{ s[3] }}</td></tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
