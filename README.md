@@ -9,3 +9,12 @@ Browser: http://localhost:5000
 
 ## Stop
     docker compose down
+
+## Tech Stack
+- Python Flask (web container)
+- PostgreSQL (database container)
+- Docker Compose
+- Git + GitHub (version control)
+
+## Author
+Vedant
